@@ -14,6 +14,7 @@ function NavBar({links}) {
 
     const selected = useSelector((state) => state.books.selected) 
     const [searchInputValue, setSearchInputValue] = useState("")
+    const [reload, setReload] = useState(false)
 
     const dispatch = useDispatch()
     
@@ -22,6 +23,7 @@ function NavBar({links}) {
         dispatch(searchData(""))
         dispatch(setCurrentAsin(""))
         setSearchInputValue("")
+        setReload(!reload)
         navigate("/")
     }
 
@@ -34,7 +36,10 @@ function NavBar({links}) {
       
     }, [searchInputValue])
     
-
+    useEffect(() => {
+        
+    }, [reload])
+    
     
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
