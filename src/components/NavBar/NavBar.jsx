@@ -19,8 +19,8 @@ function NavBar({links}) {
     
     const selectCategory = (e) => {
         dispatch(searchData(""))
-        dispatch(setSelected(e))
         dispatch(setCurrentAsin(""))
+        dispatch(setSelected(e))
         setSearchInputValue("")
         navigate("/")
     }
@@ -34,7 +34,7 @@ function NavBar({links}) {
       
     }, [searchInputValue])
     
-
+    
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
     <Container fluid>
