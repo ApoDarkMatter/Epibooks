@@ -8,7 +8,6 @@ import { useDispatch } from "react-redux";
 import { searchData, setCurrentAsin, setSelected } from "../../reducers/booksList";
 
 function NavBar({links}) {
-
     const [searchInputValue, setSearchInputValue] = useState("")
 
     const dispatch = useDispatch()
