@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { searchData, setIsLoading, setSelected } from "../../reducers/booksList";
+import { searchData, setIsLoading } from "../../reducers/booksList";
 import { nanoid } from "@reduxjs/toolkit";
 import BookCard from "../BookCard/BookCard";
 import { Container, Row, Col } from "react-bootstrap";
