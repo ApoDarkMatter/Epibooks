@@ -17,9 +17,11 @@ const BookDetails = () => {
 
   const { bookId } = useParams()
 
+  const dispatch = useDispatch()
+
   const searchResById = useSelector((state) => state.books.searchResultById)
 
-  const dispatch = useDispatch()
+  
   
   useEffect(() => {
     setLoading(true)
