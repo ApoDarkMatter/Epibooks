@@ -4,10 +4,15 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { searchData, setCurrentAsin, setSelected } from "../../reducers/booksList";
+import { useNavigate } from 'react-router-dom';
 
 function NavBar({links}) {
+
+    const navigate = useNavigate()
+
+    const selected = useSelector((state) => state.books.selected) 
     const [searchInputValue, setSearchInputValue] = useState("")
 
     const dispatch = useDispatch()
@@ -17,6 +22,7 @@ function NavBar({links}) {
         dispatch(setSelected(e))
         dispatch(setCurrentAsin(""))
         setSearchInputValue("")
+        navigate("/")
     }
 
     useEffect(() => {
@@ -46,7 +52,7 @@ function NavBar({links}) {
                         ))}
             </Nav>
 
-            <Form.Select onChange={(e) => selectCategory(e.target.value)}>
+            <Form.Select onChange={(e) => selectCategory(e.target.value)} value={selected}>
               <option value="fantasy">Fantasy</option>
               <option value="horror">Horror</option>
               <option value="history">History</option>
