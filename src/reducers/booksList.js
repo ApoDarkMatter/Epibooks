@@ -27,7 +27,6 @@ export const booksList = createSlice({
   reducers: {
     setSelected: (state, action) => {
       state.selected = action.payload
-      //state.searchResult = state.cat[action.payload]
     },
     searchData: (state,action) => {
       state.searchResult = state.cat[state.selected].filter((book) => book.title.toLowerCase().includes(action.payload.toLowerCase()))
