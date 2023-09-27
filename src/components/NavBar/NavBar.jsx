@@ -18,9 +18,9 @@ function NavBar({links}) {
     const dispatch = useDispatch()
     
     const selectCategory = (e) => {
+        dispatch(setSelected(e))
         dispatch(searchData(""))
         dispatch(setCurrentAsin(""))
-        dispatch(setSelected(e))
         setSearchInputValue("")
         navigate("/")
     }
@@ -34,7 +34,7 @@ function NavBar({links}) {
       
     }, [searchInputValue])
     
-    
+
     
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
