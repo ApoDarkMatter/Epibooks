@@ -33,7 +33,7 @@ export const booksList = createSlice({
       state.currentAsin = ""
     },
     searchDataByAsin: (state,action) => {
-      state.searchResultById = state.cat[state.selected].find((book) => book.asin==action.payload)
+      state.searchResultById = state.cat[state.selected].find((book) => book.asin===action.payload)
     },
     setCurrentAsin: (state,action) => {
       state.currentAsin = action.payload

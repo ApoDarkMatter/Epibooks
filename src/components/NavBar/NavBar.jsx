@@ -35,6 +35,7 @@ function NavBar({links}) {
     }, [searchInputValue])
     
     
+    
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
     <Container fluid>
