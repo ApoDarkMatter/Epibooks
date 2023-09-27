@@ -27,7 +27,7 @@ function BookCard({bookDetails,sel}) {
         <Card.Body>
           <Card.Title>{bookDetails.title}</Card.Title>
           <Card.Text>
-            {bookDetails.asin}
+            {bookDetails.category} - {bookDetails.asin}
           </Card.Text>
         </Card.Body>
         <Button variant="primary" href={`./bookdetails/${bookDetails.asin}`} style={{ marginBottom: '10px' }}>Book Details</Button>
@@ -40,7 +40,7 @@ function BookCard({bookDetails,sel}) {
         <Card.Body>
           <Card.Title>{bookDetails.title}</Card.Title>
           <Card.Text>
-            {bookDetails.asin}
+            {bookDetails.category} - {bookDetails.asin}
           </Card.Text>
         </Card.Body>
         <Button variant="primary" href={`./bookdetails/${bookDetails.asin}`} style={{ marginBottom: '10px' }}>Book Details</Button>
