@@ -1,6 +1,7 @@
 import { nanoid } from 'nanoid'
 import React from 'react'
 import {Container, Row, Col} from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const MyFooter = ({links}) => {
   return (
@@ -15,7 +16,7 @@ const MyFooter = ({links}) => {
                     <h5>Quick Links</h5>
                     <ul className="list-unstyled">
                         {links.map(link => (
-                            <a key={nanoid()} href={link.href}><li>{link.name}</li></a>
+                            <Link to={link.href} key={nanoid()}><li>{link.name}</li></Link>
                         ))}
                     </ul>
                     </Col>

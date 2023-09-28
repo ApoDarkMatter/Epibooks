@@ -6,7 +6,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { useDispatch, useSelector } from "react-redux";
 import { searchData, setCurrentAsin, setSelected } from "../../reducers/booksList";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import './NavBar.css'
 
 function NavBar({links}) {
 
@@ -54,7 +55,7 @@ function NavBar({links}) {
         >
             <Nav className="me-auto">
                         {links.map(link => (
-                            <Nav.Link key={nanoid()} href={link.href}>{link.name}</Nav.Link>
+                            <Link to={link.href} key={nanoid()} className="NavBarLink">{link.name}</Link>
                         ))}
             </Nav>
 

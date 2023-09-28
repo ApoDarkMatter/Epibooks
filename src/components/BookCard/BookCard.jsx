@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import './BookCard.css'
 import { useDispatch } from 'react-redux';
 import { setCurrentAsin } from '../../reducers/booksList';
+import { Link } from 'react-router-dom';
 
 function BookCard({bookDetails,sel}) {
   
@@ -30,7 +31,7 @@ function BookCard({bookDetails,sel}) {
             {bookDetails.category} - {bookDetails.asin}
           </Card.Text>
         </Card.Body>
-        <Button variant="primary" href={`./bookdetails/${bookDetails.asin}`} style={{ marginBottom: '10px' }}>Book Details</Button>
+        <Link to={`./bookdetails/${bookDetails.asin}`}><Button variant="primary" style={{ marginBottom: '10px' }}>Book Details</Button></Link>
       </Card>
     )
   } else {
@@ -43,7 +44,7 @@ function BookCard({bookDetails,sel}) {
             {bookDetails.category} - {bookDetails.asin}
           </Card.Text>
         </Card.Body>
-        <Button variant="primary" href={`./bookdetails/${bookDetails.asin}`} style={{ marginBottom: '10px' }}>Book Details</Button>
+        <Link to={`./bookdetails/${bookDetails.asin}`}><Button variant="primary" style={{ marginBottom: '10px' }}>Book Details</Button></Link>
       </Card>
     )
   }

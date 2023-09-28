@@ -1,8 +1,4 @@
 import React, { useEffect, useState } from "react";
-import NavBar from "../components/NavBar/NavBar";
-import MyFooter from '../components/MyFooter/MyFooter'
-import { navLinks } from "../data/myNavBarLinks"
-import { footerLinks } from "../data/myFooterLinks"
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { searchDataByAsin } from "../reducers/booksList";
@@ -10,6 +6,7 @@ import { nanoid } from "@reduxjs/toolkit";
 import { Row } from "react-bootstrap";
 import BookCardPriceButton from "../components/BookCardPriceButton/BookCardPriceButton";
 import { InfinitySpin } from "react-loader-spinner";
+import MainLayout from "../Layouts/MainLayout";
 
 
 const BookDetails = () => {
@@ -34,26 +31,25 @@ const BookDetails = () => {
   if(loading) {
     return (
       <>
-        <NavBar links={navLinks}/>
+        <MainLayout>
           <Row className="h-100">
               <InfinitySpin 
                 width='200'
                 color="#000"
               />
           </Row>
-        <MyFooter links={footerLinks} />
+        </MainLayout>
       </>
     )
       
   } else {
     return (
       <>
-          <NavBar links={navLinks}/>
-          <Row className="justify-content-md-center">
-            <BookCardPriceButton key={nanoid()} bookDetails={searchResById} />
-          </Row>
-          
-          <MyFooter links={footerLinks} />
+          <MainLayout>
+            <Row className="justify-content-md-center">
+              <BookCardPriceButton key={nanoid()} bookDetails={searchResById} />
+            </Row>
+          </MainLayout>
       </>
     );
   }
