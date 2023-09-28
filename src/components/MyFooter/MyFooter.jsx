@@ -10,7 +10,7 @@ const MyFooter = ({links}) => {
                 <Row className="justify-content-center py-4">
                     <Col md={4} className="text-center">
                     <h5>EpiBooks</h5>
-                    <p>WOW Books!.</p>
+                    <p>WOW Books!</p>
                     </Col>
                     <Col md={4} className="text-center">
                     <h5>Quick Links</h5>
