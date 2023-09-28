@@ -3,10 +3,11 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { searchDataByAsin } from "../reducers/booksList";
 import { nanoid } from "@reduxjs/toolkit";
-import { Row } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import BookCardPriceButton from "../components/BookCardPriceButton/BookCardPriceButton";
 import { InfinitySpin } from "react-loader-spinner";
 import MainLayout from "../Layouts/MainLayout";
+import CommentArea from "../components/CommentArea/CommentArea";
 
 
 const BookDetails = () => {
@@ -46,9 +47,18 @@ const BookDetails = () => {
     return (
       <>
           <MainLayout>
-            <Row className="justify-content-md-center">
-              <BookCardPriceButton key={nanoid()} bookDetails={searchResById} />
-            </Row>
+            <Container style={{marginTop: '10px'}}>
+              <Row className="h-100">
+                <Col lg={9}>
+                  <Row className="justify-content-md-center">
+                    <BookCardPriceButton key={nanoid()} bookDetails={searchResById} />
+                  </Row>
+                </Col>
+                <Col lg={3}>
+                  <CommentArea asin={searchResById.asin}/>
+                </Col>
+              </Row>
+            </Container>
           </MainLayout>
       </>
     );
