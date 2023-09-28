@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
+import { Badge } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 
 function BookCardPriceButton({bookDetails}) {
@@ -12,7 +12,7 @@ function BookCardPriceButton({bookDetails}) {
           {bookDetails.category} - {bookDetails.asin}
         </Card.Text>
       </Card.Body>
-      <Button variant="primary" style={{ marginBottom: '10px', width: '100%' }}>Price {bookDetails.price} €</Button>
+      <Badge bg="warning" text="dark" style={{ marginBottom: '10px', width: '100%', height: '30px', display: 'flex', justifyContent:'center',alignItems:'center', fontSize: '1rem' }}>Price {bookDetails.price} €</Badge>
     </Card>
   )
 }
