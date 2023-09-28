@@ -24,7 +24,7 @@ const CommentArea = ({asin}) => {
             'Authorization': token
         }})
         
-        if(response.data === null) {
+        if(response.data.length === 0) {
           setAvailableComment(false)
         } else {
           setComment(response.data)
@@ -72,8 +72,9 @@ const CommentArea = ({asin}) => {
       } else {
         return (
           <>
-            <h2>No Comments</h2>
             <AddComment asin={asin} func={getComments}/>
+            <h2>No Comments</h2>
+            <h4>Add one with form above!</h4>
           </>
         )
       }
