@@ -4,7 +4,7 @@ export const footerLinks = [
         name: "Home"
     },
     {
-        href: "./about",
+        href: "/about",
         name: "About"
     },
 ]
