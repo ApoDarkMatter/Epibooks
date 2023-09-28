@@ -9,10 +9,10 @@ function BookCardPriceButton({bookDetails}) {
       <Card.Body>
         <Card.Title>{bookDetails.title}</Card.Title>
         <Card.Text>
-          {bookDetails.asin}
+          {bookDetails.category} - {bookDetails.asin}
         </Card.Text>
       </Card.Body>
-      <Button variant="primary" style={{ marginBottom: '10px' }}>Price {bookDetails.price}</Button>
+      <Button variant="primary" style={{ marginBottom: '10px', width: '100%' }}>Price {bookDetails.price} €</Button>
     </Card>
   )
 }
