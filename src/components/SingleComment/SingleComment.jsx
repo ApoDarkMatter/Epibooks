@@ -30,6 +30,9 @@ const SingleComment = ({comment,asin,func}) => {
             <Card.Body>
                 <Card.Title>Rate: {comment.rate}</Card.Title>
                 <Card.Text>
+                    {comment.author}
+                </Card.Text>
+                <Card.Text>
                     {comment.comment}
                 </Card.Text>
             </Card.Body>
