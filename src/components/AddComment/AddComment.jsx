@@ -65,7 +65,7 @@ const AddComment = ({asin,func}) => {
                     ></input>
                 </Card.Text>
             </Card.Body>
-            <Button type="button" onClick={addComment}>Add Comment</Button>
+            <Button type="button" onClick={addComment} style={{margin:'5px'}}>Add Comment</Button>
             </Card>
         </>
     )
