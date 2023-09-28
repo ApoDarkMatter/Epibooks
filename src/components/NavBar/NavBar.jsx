@@ -43,7 +43,7 @@ function NavBar({links}) {
     
     
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary" fixed='top'>
     <Container fluid>
       <Navbar.Brand>EpiBooks</Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll" />

@@ -33,7 +33,7 @@ const BookDetails = () => {
     return (
       <>
         <MainLayout>
-          <Row className="h-100">
+          <Row className="h-100" style={{marginTop: '80px'}}>
               <InfinitySpin 
                 width='200'
                 color="#000"
@@ -47,7 +47,7 @@ const BookDetails = () => {
     return (
       <>
           <MainLayout>
-            <Container style={{marginTop: '10px'}}>
+            <Container style={{marginTop: '80px'}}>
               <Row className="h-100">
                 <Col lg={9}>
                   <Row className="justify-content-md-center">
